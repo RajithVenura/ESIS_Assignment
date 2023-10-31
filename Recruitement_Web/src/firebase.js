@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCHqK9UDZRQXZvW846rI6YiVsNH_Ykg4Cw",
-  authDomain: "research-management-syst-51836.firebaseapp.com",
-  projectId: "research-management-syst-51836",
-  storageBucket: "research-management-syst-51836.appspot.com",
-  messagingSenderId: "239805755772",
-  appId: "1:239805755772:web:1738b2d8275d55ab3a34f9",
+  apiKey: "AIzaSyAs7fsptmKF3_8Wun9EPkzDYm8me0Svq78",
+  authDomain: "esis-assignment.firebaseapp.com",
+  projectId: "esis-assignment",
+  storageBucket: "esis-assignment.appspot.com",
+  messagingSenderId: "770717375531",
+  appId: "1:770717375531:web:3834d08226759c23c59e6e"
 };
 
 // Initialize Firebase

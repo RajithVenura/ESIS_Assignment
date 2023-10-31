@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCCGvpxqGfhvqXSAwCZSdb5o6BbpRlg-HE",
-  authDomain: "recruiters-64229.firebaseapp.com",
-  projectId: "recruiters-64229",
-  storageBucket: "recruiters-64229.appspot.com",
-  messagingSenderId: "122065097780",
-  appId: "1:122065097780:web:14b96ae4476d6544f7e661",
+  apiKey: "AIzaSyAs7fsptmKF3_8Wun9EPkzDYm8me0Svq78",
+  authDomain: "esis-assignment.firebaseapp.com",
+  projectId: "esis-assignment",
+  storageBucket: "esis-assignment.appspot.com",
+  messagingSenderId: "770717375531",
+  appId: "1:770717375531:web:3834d08226759c23c59e6e"
 };
 
 // Initialize Firebase
