@@ -15,7 +15,7 @@ const CreateConfirmationLink = async (email) => {
     }
   );
 
-  return `https://rwa-webapp.azurewebsites.net/api/user/UserEmailConfirm/${newToken}`;
+  return `http://localhost:8080/api/user/UserEmailConfirm/${newToken}`;
 };
 
 //Email Confirmation
@@ -522,7 +522,7 @@ const CheckUserEmailToForgotPassword = async (req, res) => {
         }
       );
 
-      const passwordRestUrl = `https://rwa-webapp.azurewebsites.net/api/user/UserForgotPassword/${Link}`;
+      const passwordRestUrl = `http://localhost:8080/api/user/UserForgotPassword/${Link}`;
 
       return res.status(200).send({
         status: true,
@@ -591,7 +591,7 @@ const UserResetPasswordEmailCheck = async (req, res) => {
       }
     );
 
-    ResetPasswrodUrl = `https://rwa-webapp.azurewebsites.net/api/user/UserResetPassword/${newToken}`;
+    ResetPasswrodUrl = `http://localhost:8080/api/user/UserResetPassword/${newToken}`;
 
     res.status(200);
     res.send({

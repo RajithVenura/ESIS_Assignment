@@ -15,7 +15,7 @@ const CreateConfirmationLink = async (email) => {
     }
   );
 
-  return `https://rwa-webapp.azurewebsites.net/api/admin/EmailConfirm/${newToken}`;
+  return `http://localhost:8080/api/admin/EmailConfirm/${newToken}`;
 };
 
 //Admin Account Creation
