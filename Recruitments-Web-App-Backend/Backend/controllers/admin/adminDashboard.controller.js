@@ -33,7 +33,7 @@ const GetAllAnalyticalData = async (req, res) => {
 
     return res.status(200).send({ status: true, analytics: data });
   } catch (err) {
-    return res.status(404).send({
+    return res.status(500).send({
       success: false,
       message: "Job not found",
     });
