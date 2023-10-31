@@ -26,7 +26,7 @@ const Signup = () => {
       } else if (data.password.length < 6) {
         setError("Password must be at least 6 characters");
       } else {
-        const url = "https://rwa-webapp.azurewebsites.net/api/admin/Register";
+        const url = "http://localhost:8080/api/admin/Register";
         const { data: res } = await axios.post(url, data);
         navigate("/notice");
         console.log(res.message);

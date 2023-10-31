@@ -52,7 +52,7 @@ const UpdateJobs = () => {
     const getJob = async () => {
       const job = await axios
         .get(
-          `https://rwa-webapp.azurewebsites.net/api/jobMgt/GetSpecificJob/${id}`
+          `http://localhost:8080/api/jobMgt/GetSpecificJob/${id}`
         )
         .then((response) => {
           return response.data.job;
@@ -317,7 +317,7 @@ const UpdateJobs = () => {
               console.log(jobDetails);
               axios
                 .patch(
-                  `https://rwa-webapp.azurewebsites.net/api/jobMgt/UpdateJob/${id}`,
+                  `http://localhost:8080/api/jobMgt/UpdateJob/${id}`,
                   jobDetails,
                   {
                     headers: {

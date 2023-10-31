@@ -35,7 +35,7 @@ const UpdateUsers = () => {
   //Send token to backend to get user data with header authorization
   const fetchUser = async () => {
     const res = await axios.get(
-      `https://rwa-webapp.azurewebsites.net/api/userMgt/GetOneUser/${id}`,
+      `http://localhost:8080/api/userMgt/GetOneUser/${id}`,
       {
         headers: {
           Authorization: `${token}`,
@@ -106,7 +106,7 @@ const UpdateUsers = () => {
 
       axios
         .patch(
-          `https://rwa-webapp.azurewebsites.net/api/userMgt/UpdateUser/${id}`,
+          `http://localhost:8080/api/userMgt/UpdateUser/${id}`,
           updatedProfle,
           {
             headers: {
@@ -141,7 +141,7 @@ const UpdateUsers = () => {
       } else if (password.length < 6) {
         setError("Password must be at least 6 characters");
       } else {
-        const url = `https://rwa-webapp.azurewebsites.net/api/userMgt/SetTemporyPassword/${id}`;
+        const url = `http://localhost:8080/api/userMgt/SetTemporyPassword/${id}`;
         const data = { tempPassword: password };
         const config = {
           headers: {

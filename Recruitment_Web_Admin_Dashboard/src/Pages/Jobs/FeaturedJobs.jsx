@@ -51,7 +51,7 @@ const FeaturedJobs = () => {
   useEffect(() => {
     const featuredJ = async () => {
       const allJobs = await axios
-        .get("https://rwa-webapp.azurewebsites.net/api/jobMgt/GetALLJobs", {
+        .get("http://localhost:8080/api/jobMgt/GetALLJobs", {
           headers: {
             Authorization: `${userId}`,
           },
@@ -96,7 +96,7 @@ const FeaturedJobs = () => {
     });
     axios
       .delete(
-        `https://rwa-webapp.azurewebsites.net/api/jobMgt/DeleteJob/${id}`,
+        `http://localhost:8080/api/jobMgt/DeleteJob/${id}`,
         {
           headers: {
             Authorization: `${userId}`,
@@ -156,7 +156,7 @@ const FeaturedJobs = () => {
     const searchKey = e.currentTarget.value;
 
     axios
-      .get("https://rwa-webapp.azurewebsites.net/api/jobMgt/GetALLJobs", {
+      .get("http://localhost:8080/api/jobMgt/GetALLJobs", {
         headers: {
           Authorization: `${userId}`,
         },

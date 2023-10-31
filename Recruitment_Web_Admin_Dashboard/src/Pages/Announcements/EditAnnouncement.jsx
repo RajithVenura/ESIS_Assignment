@@ -36,7 +36,7 @@ const EditAnnouncement = () => {
   useEffect(() => {
     const getAnnouncement = async () => {
       const notice = await axios
-        .get(`https://rwa-webapp.azurewebsites.net/api/notice/specNotice/${id}`)
+        .get(`http://localhost:8080/api/notice/specNotice/${id}`)
         .then((response) => {
           return response.data.notice;
         })
@@ -170,7 +170,7 @@ const EditAnnouncement = () => {
           console.log(updateAnnouncement);
           axios
             .put(
-              `https://rwa-webapp.azurewebsites.net/api/notice/upNotice/${id}`,
+              `http://localhost:8080/api/notice/upNotice/${id}`,
               updateAnnouncement,
               {
                 headers: {

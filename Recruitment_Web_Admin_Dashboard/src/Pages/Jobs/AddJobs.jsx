@@ -276,7 +276,7 @@ const AddJobs = () => {
               console.log(jobDetails);
               axios
                 .post(
-                  "https://rwa-webapp.azurewebsites.net/api/jobMgt/CreateJob",
+                  "http://localhost:8080/api/jobMgt/CreateJob",
                   jobDetails,
                   {
                     headers: {

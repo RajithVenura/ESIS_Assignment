@@ -147,7 +147,7 @@ const NewAnnouncement = () => {
             console.log(data);
             axios
               .post(
-                "https://rwa-webapp.azurewebsites.net/api/notice/createNotice",
+                "http://localhost:8080/api/notice/createNotice",
                 data,
                 {
                   headers: {

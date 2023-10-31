@@ -41,7 +41,7 @@ const Navbar = () => {
   //Send token to backend to get user data with header authorization
   const fetchUser = async () => {
     const res = await axios.get(
-      `https://rwa-webapp.azurewebsites.net/api/admin/AdminProfile`,
+      `http://localhost:8080/api/admin/AdminProfile`,
       {
         headers: {
           Authorization: `${userId}`,

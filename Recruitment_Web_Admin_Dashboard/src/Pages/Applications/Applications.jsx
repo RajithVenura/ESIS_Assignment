@@ -19,7 +19,7 @@ const Applications = () => {
     const Users = async () => {
       const appliedjobs = await axios
         .get(
-          "https://rwa-webapp.azurewebsites.net/api/applyJob/getAllAppliedJobs",
+          "http://localhost:8080/api/applyJob/getAllAppliedJobs",
           {
             headers: {
               Authorization: `${userId}`,
@@ -40,7 +40,7 @@ const Applications = () => {
 
         const jobData = await axios
           .get(
-            `https://rwa-webapp.azurewebsites.net/api/jobMgt/GetSpecificJob/${appliedjobs[i].jobId}`
+            `http://localhost:8080/api/jobMgt/GetSpecificJob/${appliedjobs[i].jobId}`
           )
           .then((response) => {
             return response.data.job;
@@ -107,7 +107,7 @@ const Applications = () => {
     const searchKey = e.currentTarget.value;
     axios
       .get(
-        "https://rwa-webapp.azurewebsites.net/api/applyJob/getAllAppliedJobs",
+        "http://localhost:8080/api/applyJob/getAllAppliedJobs",
         {
           headers: {
             Authorization: `${userId}`,

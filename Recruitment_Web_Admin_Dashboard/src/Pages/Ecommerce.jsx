@@ -27,7 +27,7 @@ const Ecommerce = () => {
   };
   const GetRealtimeData = async () => {
     axios
-      .get("https://rwa-webapp.azurewebsites.net/api/dashboard/data", config)
+      .get("http://localhost:8080/api/dashboard/data", config)
       .then((res) => {
         if (res.status) {
           setData(res.data.analytics);

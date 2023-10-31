@@ -21,7 +21,7 @@ const ForgotPw = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://rwa-webapp.azurewebsites.net/api/admin/EmailCheck";
+      const url = "http://localhost:8080/api/admin/EmailCheck";
       const { data: res } = await axios.post(url, data);
       navigate("/notice");
       console.log(res.message);

@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://rwa-webapp.azurewebsites.net/api/admin/AdminLogin";
+      const url = "http://localhost:8080/api/admin/AdminLogin";
       const { data: res } = await axios.post(url, data);
 
       localStorage.setItem("Token", res.token);

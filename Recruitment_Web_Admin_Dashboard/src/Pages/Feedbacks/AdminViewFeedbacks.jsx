@@ -31,7 +31,7 @@ const AdminViewFeedbacks = () => {
   useEffect(() => {
     const GetAllFeedbacks = async () => {
       await axios
-        .get("https://rwa-webapp.azurewebsites.net/api/feedbacks/getFeedbacks")
+        .get("http://localhost:8080/api/feedbacks/getFeedbacks")
         .then((res) => {
           if (res.data.status) {
             setFeedbacks(res.data.feedbacks);
@@ -81,7 +81,7 @@ const AdminViewFeedbacks = () => {
     });
     axios
       .delete(
-        `https://rwa-webapp.azurewebsites.net/api/feedbacks/adminDeleteFeedback/${id}`,
+        `http://localhost:8080/api/feedbacks/adminDeleteFeedback/${id}`,
         {
           headers: {
             Authorization: `${token}`,

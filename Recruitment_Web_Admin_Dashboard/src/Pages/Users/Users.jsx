@@ -36,7 +36,7 @@ const Users = () => {
   useEffect(() => {
     const Users = async () => {
       const allUsers = await axios
-        .get("https://rwa-webapp.azurewebsites.net/api/userMgt/GetAllUsers", {
+        .get("http://localhost:8080/api/userMgt/GetAllUsers", {
           headers: {
             Authorization: `${userId}`,
           },
@@ -80,7 +80,7 @@ const Users = () => {
     });
     axios
       .delete(
-        `https://rwa-webapp.azurewebsites.net/api/userMgt/DeleteUser/${id}`,
+        `http://localhost:8080/api/userMgt/DeleteUser/${id}`,
         {
           headers: {
             Authorization: `${userId}`,
@@ -120,7 +120,7 @@ const Users = () => {
   const onSearch = async (e) => {
     const searchKey = e.currentTarget.value;
     axios
-      .get("https://rwa-webapp.azurewebsites.net/api/userMgt/GetAllUsers", {
+      .get("http://localhost:8080/api/userMgt/GetAllUsers", {
         headers: {
           Authorization: `${userId}`,
         },

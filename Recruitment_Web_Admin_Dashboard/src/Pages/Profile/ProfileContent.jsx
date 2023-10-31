@@ -31,7 +31,7 @@ const ProfileContent = () => {
       isOpen: false,
     });
     axios
-      .delete(`https://rwa-webapp.azurewebsites.net/api/admin/DeleteAdmin`, {
+      .delete(`http://localhost:8080/api/admin/DeleteAdmin`, {
         headers: {
           Authorization: `${userId}`,
         },
@@ -73,7 +73,7 @@ const ProfileContent = () => {
   //Send token to backend to get user data with header authorization
   const fetchUser = async () => {
     const res = await axios.get(
-      `https://rwa-webapp.azurewebsites.net/api/admin/AdminProfile`,
+      `http://localhost:8080/api/admin/AdminProfile`,
       {
         headers: {
           Authorization: `${userId}`,

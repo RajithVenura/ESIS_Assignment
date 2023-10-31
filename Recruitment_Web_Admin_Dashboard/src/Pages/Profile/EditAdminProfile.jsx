@@ -46,7 +46,7 @@ const EditAdminProfile = () => {
       } else if (newPassword.length < 6) {
         setError("Password must be at least 6 characters");
       } else {
-        const url = `https://rwa-webapp.azurewebsites.net/api/admin/ResetPassword`;
+        const url = `http://localhost:8080/api/admin/ResetPassword`;
         const data = { oldPassword: oldPassword, newPassword: newPassword };
         const config = {
           headers: {
@@ -79,7 +79,7 @@ const EditAdminProfile = () => {
   //Send token to backend to get user data with header authorization
   const fetchUser = async () => {
     const res = await axios.get(
-      `https://rwa-webapp.azurewebsites.net/api/admin/AdminProfile`,
+      `http://localhost:8080/api/admin/AdminProfile`,
       {
         headers: {
           Authorization: `${userId}`,
@@ -152,7 +152,7 @@ const EditAdminProfile = () => {
   //         console.log(updatedProfle);
   //         axios
   //           .patch(
-  //             "https://rwa-webapp.azurewebsites.net/api/admin/UpdateAdmin",
+  //             "http://localhost:8080/api/admin/UpdateAdmin",
   //             updatedProfle,
   //             {
   //               headers: {
@@ -267,7 +267,7 @@ const EditAdminProfile = () => {
               };
               axios
                 .patch(
-                  "https://rwa-webapp.azurewebsites.net/api/admin/UpdateAdmin",
+                  "http://localhost:8080/api/admin/UpdateAdmin",
                   updatedProfle,
                   {
                     headers: {
@@ -304,7 +304,7 @@ const EditAdminProfile = () => {
         console.log(updatedProfle);
         await axios
           .patch(
-            "https://rwa-webapp.azurewebsites.net/api/admin/UpdateAdmin",
+            "http://localhost:8080/api/admin/UpdateAdmin",
             updatedProfle,
             {
               headers: {

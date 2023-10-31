@@ -41,7 +41,7 @@ const UserDetails = () => {
   useEffect(() => {
     axios
       .get(
-        `https://rwa-webapp.azurewebsites.net/api/userMgt/GetOneUser/${id}`,
+        `http://localhost:8080/api/userMgt/GetOneUser/${id}`,
         {
           headers: {
             Authorization: `${Token}`,

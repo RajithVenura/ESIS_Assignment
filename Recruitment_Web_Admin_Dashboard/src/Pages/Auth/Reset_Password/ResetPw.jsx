@@ -29,7 +29,7 @@ const ResetPw = () => {
       } else if (data.password.length < 6) {
         setError("Password must be at least 6 characters");
       } else {
-        const url = `https://rwa-webapp.azurewebsites.net/api/admin/ForgotPassword/${link}`;
+        const url = `http://localhost:8080/api/admin/ForgotPassword/${link}`;
         const { data: res } = await axios.patch(url, data);
         setNotify({
           isOpen: true,

@@ -128,7 +128,7 @@ const AddNewAdmin = () => {
                   console.log(data);
                   axios
                     .post(
-                      "https://rwa-webapp.azurewebsites.net/api/admin/Register",
+                      "http://localhost:8080/api/admin/Register",
                       data
                     )
                     .then((res) => {
@@ -165,7 +165,7 @@ const AddNewAdmin = () => {
 
             axios
               .post(
-                "https://rwa-webapp.azurewebsites.net/api/admin/Register",
+                "http://localhost:8080/api/admin/Register",
                 data
               )
               .then((res) => {

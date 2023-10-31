@@ -20,7 +20,7 @@ const Announcements = () => {
   useEffect(() => {
     const announcement = async () => {
       const allAnnouncements = await axios
-        .get("https://rwa-webapp.azurewebsites.net/api/notice/getNotice", {
+        .get("http://localhost:8080/api/notice/getNotice", {
           headers: {
             Authorization: `${token}`,
           },
@@ -78,7 +78,7 @@ const Announcements = () => {
     });
     axios
       .delete(
-        `https://rwa-webapp.azurewebsites.net/api/notice/deleteNotice/${id}`,
+        `http://localhost:8080/api/notice/deleteNotice/${id}`,
         {
           headers: {
             Authorization: `${token}`,
@@ -131,7 +131,7 @@ const Announcements = () => {
     const searchKey = e.currentTarget.value;
 
     axios
-      .get("https://rwa-webapp.azurewebsites.net/api/notice/getNotice", {
+      .get("http://localhost:8080/api/notice/getNotice", {
         headers: {
           Authorization: `${token}`,
         },

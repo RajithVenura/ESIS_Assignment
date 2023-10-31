@@ -38,7 +38,7 @@ const JobDetails = () => {
     function getDetails() {
       axios
         .get(
-          `https://rwa-webapp.azurewebsites.net/api/jobMgt/GetSpecificJob/${id}`
+          `http://localhost:8080/api/jobMgt/GetSpecificJob/${id}`
         )
 
         .then((res) => {
